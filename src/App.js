@@ -1,10 +1,11 @@
-import logo from './logo.svg';
 import './App.css';
+import wizard from './wizard.png';
 
 function Header() {
   return (
     <header>
-      <h1>sourcerise</h1>
+      <h1>srcerise</h1>
+      <img src={wizard} alt="wizard in action" height={200}></img>
 
     </header>
   );
@@ -31,9 +32,10 @@ const sourcerings = [{
 function Main(props) {
   return (
     <section>
-      <h3>Internet sourcery that helps your activist group source important material needs to create safety and wellness for sentient beings thus supporting a deeper connection to source.</h3>
+      <h3>Internet srcery that helps your activist group src important material needs to create safety and wellness for sentient beings... </h3>
+      <p>...thus supporting a deeper connection to src.</p>
       <br></br>
-      <h4>Things to source...</h4>
+      <h4>Things to src...</h4>
       <table className="sourcerings">
         <thead>
           <tr>
@@ -47,7 +49,7 @@ function Main(props) {
         {/* {console.log(props.sourcerings)} */}
         <tbody>
             {Object.keys(props.sourcerings).map( (key) => {
-              return <tr key={key}><td>{props.sourcerings[key].amount}</td>
+              return <tr key={props.sourcerings[key].id} className={"item-" + props.sourcerings[key].id}><td>{props.sourcerings[key].amount}</td>
                 <td>{props.sourcerings[key].unit}</td>
                 <td>{props.sourcerings[key].name}</td>
                 <td>{props.sourcerings[key].type}</td>
@@ -64,8 +66,9 @@ function Footer(props) {
   return (
     <footer>
       <p>
-        Open source since {props.year}
+        Open src since {props.year}
       </p>
+      <p>Thanks pixabay for the image</p>
 
     </footer>
   );
