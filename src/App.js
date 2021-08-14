@@ -11,7 +11,7 @@ function Header() {
 }
 
 const sourcerings = [{
-    "id": 1,
+    id: 1,
     "amount": 15,
     "unit": "lbs",
     "type": "food",
@@ -19,7 +19,7 @@ const sourcerings = [{
     "description": "any kind"
   },
   {
-    "id" : 2,
+    id : 2,
     "amount": 3,
     "unit": "units",
     "type": "appliance",
@@ -27,7 +27,7 @@ const sourcerings = [{
     "description": "1500 Watts or more, gasoline, diesel or solar."
   }
 ]
-console.log(sourcerings);
+// console.log(sourcerings);
 function Main(props) {
   return (
     <section>
@@ -44,11 +44,10 @@ function Main(props) {
             <td>Description:</td>
           </tr>
         </thead >
-        {console.log(props.sourcerings.item)}
+        {/* {console.log(props.sourcerings)} */}
         <tbody>
             {Object.keys(props.sourcerings).map( (key) => {
-              console.log(props.sourcerings[key]);
-              return <tr><td>{props.sourcerings[key].amount}</td>
+              return <tr key={key}><td>{props.sourcerings[key].amount}</td>
                 <td>{props.sourcerings[key].unit}</td>
                 <td>{props.sourcerings[key].name}</td>
                 <td>{props.sourcerings[key].type}</td>
