@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useReducer } from 'react';
 import './App.css';
 import wizard from './wizard.png';
 
@@ -65,7 +65,7 @@ function Main(props) {
 }
 
 function Form() {
-   const [itemAdded, setItemAdded] = useState(false);
+   const [itemAdded, toggleItemAdded] = useReducer((itemAdded) => !itemAdded, false);
    return (
      <section>
        {itemAdded ? <p className="notification">item added</p> : ""}
@@ -97,7 +97,7 @@ function Form() {
              <p>Type</p>
              <input name="type" />
            </label>
-         <button onClick={() => setItemAdded(true)}>Submit</button>
+         <button onClick={toggleItemAdded}>Submit</button>
          </fieldset>
        </form>
      </section>
@@ -105,7 +105,7 @@ function Form() {
 }
 
 function Login() {
-  const [entering, setEntering] = useState(false);
+  const [entering, toggleEntering] = useReducer((entering) => !entering, false);
   return (
     <section>
       {entering ? <p className="notification">the src is strong with you</p> : ""}
@@ -119,7 +119,7 @@ function Login() {
             <p>Password</p>
             <input name="password" />
           </label>
-          <button onClick={() => setEntering(true)}>Submit</button>
+          <button onClick={toggleEntering}>Submit</button>
         </fieldset>
       </form>
     </section>
