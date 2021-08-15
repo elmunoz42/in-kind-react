@@ -1,3 +1,24 @@
+# srcerize app
+
+Internet srcery that helps your activist group src important material needs to create safety and wellness for sentient beings...
+...thus supporting a deeper connection to src.
+
+## Tasks and wishlist
+
+
+|Status|Input|Output|Functionality|Notes|
+|-----|------|-----|------|-----|
+|New|Unauthenticated user| Logs in| Can see form to create list| leverage oauth| |
+
+
+
+
+
+
+
+
+# Boring instructions.....
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
