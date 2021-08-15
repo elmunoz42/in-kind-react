@@ -69,3 +69,10 @@ button {
   margin: 15px auto;
 
 }
+nav {
+  display: inline;
+  text-align: center;
+}
+nav li{
+  list-style: none;
+}

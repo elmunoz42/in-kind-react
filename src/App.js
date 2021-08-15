@@ -1,6 +1,28 @@
 import React, { useReducer } from 'react';
 import './App.css';
 import wizard from './wizard.png';
+import { Routes, Route } from "react-router-dom";
+import {Home, About} from './pages'
+
+function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<Home />}/>
+      <Route path="/about" element={<About />}/>
+    </Routes>
+  );
+}
+
+export function AboutComp() {
+  return (
+    <section>
+      <h1>About Srcerise</h1>
+      <p>This is a community project with the aim of bypassing shortcomings of capital based philanthropy. By accessing material needs directly from entities that have a surplus we bypass the need to "buy" things with "money" at stores and rather just give the community a vehicle to resource itself.</p>
+      <h2>Contribute to the code on Github</h2>
+      <a href="https://github.com/elmunoz42/in-kind-react" target="_blank">->Github repository</a>
+    </section>
+  );
+}
 
 function Header() {
   return (
@@ -34,7 +56,6 @@ function Main(props) {
   return (
     <section>
       <h3>Internet srcery that helps your activist group src important material needs to create safety and wellness for sentient beings... </h3>
-      <p>...thus supporting a deeper connection to src.</p>
       <br></br>
       <h4>Things to srcerise for your effort...</h4>
       <table className="sourcerings">
@@ -133,17 +154,17 @@ function Footer(props) {
       <p>
         Open src since {props.year}
       </p>
-      <p>Thanks pixabay for the image</p>
+      <p>Thanks pixabay for the free wizard image</p>
 
     </footer>
   );
 }
 
-function App(props) {
+export function HomeComp(props) {
 
   
   return (
-    <div className="App">
+    <div className="Home">
       <Header/>
       <Main sourcerings={sourcerings} />
       { props.authorized ? <Form />  : <Login /> }
