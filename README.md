@@ -8,7 +8,7 @@ Internet srcery that helps your activist group src important material needs to c
 
 |Status|Input|Output|Functionality|Notes|
 |-----|------|-----|------|-----|
-|New|Unauthenticated user| Logs in| Can see form to create list| leverage oauth| |
+|New|Unauthenticated user Logs in| Can see form to create list| leverage firebase? | | 
 
 
 
