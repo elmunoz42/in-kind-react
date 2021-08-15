@@ -35,7 +35,7 @@ function Main(props) {
       <h3>Internet srcery that helps your activist group src important material needs to create safety and wellness for sentient beings... </h3>
       <p>...thus supporting a deeper connection to src.</p>
       <br></br>
-      <h4>Things to src...</h4>
+      <h4>Things to srcerise for your effort...</h4>
       <table className="sourcerings">
         <thead>
           <tr>
@@ -62,6 +62,66 @@ function Main(props) {
     
   );
 }
+
+function Form() {
+   return (
+     <section>
+       <form>
+         <fieldset>
+           <label>
+             <p>Amount</p>
+             <input name="quantity" type="number"/>
+           </label>
+           <label>
+             <p>Unit</p>
+             <select name="unit">
+               <option>Pounds</option>
+               <option>Gallons</option>
+               <option>Count</option>
+               <option>People</option>
+               <option>Yards</option>
+             </select>
+           </label>
+           <label>
+             <p>Name</p>
+             <input name="name" />
+           </label>
+           <label>
+             <p>Description</p>
+             <input name="description" />
+           </label>
+           <label>
+             <p>Type</p>
+             <input name="type" />
+           </label>
+         <button type="submit">Submit</button>
+         </fieldset>
+       </form>
+     </section>
+   )
+}
+
+function Login() {
+  return (
+    <section>
+      <form>
+        <fieldset>
+          <label>
+            <p>Email</p>
+            <input name="email" />
+          </label>
+          <label>
+            <p>Password</p>
+            <input name="password" />
+          </label>
+        <button type="submit">Submit</button>
+        </fieldset>
+      </form>
+    </section>
+  )
+}
+
+
 function Footer(props) {
   return (
     <footer>
@@ -73,11 +133,13 @@ function Footer(props) {
     </footer>
   );
 }
-function App() {
+
+function App(props) {
   return (
     <div className="App">
       <Header/>
       <Main sourcerings={sourcerings} />
+      { props.authorized ? <Form />  : <Login /> }
       <Footer year="2021"/>
     </div>
   );
