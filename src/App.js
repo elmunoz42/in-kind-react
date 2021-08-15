@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import './App.css';
 import wizard from './wizard.png';
 
@@ -64,8 +65,10 @@ function Main(props) {
 }
 
 function Form() {
+   const [itemAdded, setItemAdded] = useState(false);
    return (
      <section>
+       {itemAdded ? <p className="notification">item added</p> : ""}
        <form>
          <fieldset>
            <label>
@@ -94,7 +97,7 @@ function Form() {
              <p>Type</p>
              <input name="type" />
            </label>
-         <button type="submit">Submit</button>
+         <button onClick={() => setItemAdded(true)}>Submit</button>
          </fieldset>
        </form>
      </section>
@@ -102,8 +105,10 @@ function Form() {
 }
 
 function Login() {
+  const [entering, setEntering] = useState(false);
   return (
     <section>
+      {entering ? <p className="notification">the src is strong with you</p> : ""}
       <form>
         <fieldset>
           <label>
@@ -114,7 +119,7 @@ function Login() {
             <p>Password</p>
             <input name="password" />
           </label>
-        <button type="submit">Submit</button>
+          <button onClick={() => setEntering(true)}>Submit</button>
         </fieldset>
       </form>
     </section>
@@ -135,6 +140,8 @@ function Footer(props) {
 }
 
 function App(props) {
+
+  
   return (
     <div className="App">
       <Header/>

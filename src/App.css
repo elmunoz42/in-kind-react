@@ -52,3 +52,20 @@ section {
 .sourcerings td{
   border: 1px lightgray solid;
 }
+.notification {
+  border: 1px lightpink solid;
+  background-color: linen;
+  max-width: 200px;
+  padding: 15px;
+  margin: 0 auto;
+}
+fieldset {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 25px;
+}
+button {
+  display: block;
+  margin: 15px auto;
+
+}
