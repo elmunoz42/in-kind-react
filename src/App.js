@@ -2,7 +2,9 @@ import React, { useReducer } from 'react';
 import './App.css';
 import wizard from './wizard.png';
 import { Routes, Route } from "react-router-dom";
-import {Home, About} from './pages'
+import {Home, About} from './pages';
+import {  GiFullPizza } from 'react-icons/gi';
+// https://react-icons.github.io/react-icons/icons?name=gi
 
 function App() {
   return (
@@ -29,7 +31,6 @@ function Header() {
     <header>
       <h1>srcerise</h1>
       <img src={wizard} alt="wizard in action" height={200}></img>
-
     </header>
   );
 }
@@ -58,6 +59,7 @@ function Main(props) {
       <h3>Internet srcery that helps your activist group src important material needs to create safety and wellness for sentient beings... </h3>
       <br></br>
       <h4>Things to srcerise for your effort...</h4>
+      <GiFullPizza/>
       <table className="sourcerings">
         <thead>
           <tr>
